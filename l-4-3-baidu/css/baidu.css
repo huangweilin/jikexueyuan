@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/*响应式：浏览器大于480px的样式*/
+
+@media only screen and (min-width:481px) {
+    /*隐藏手机模式导航部分*/
+    .phoneNav {
+        display: none;
+    }
+    
+    body {
+        font: 12px arial;
+    }
+    /*设置容器宽高，防止窗口缩小时图片。文字等被挤掉*/
+    .wrapper {
+        height: 100%;
+        min-width: 810px;
+        min-height: 650px;
+        position: relative;
+    }
+    header {
+        overflow: hidden;
+    }
+    /*导航样式*/
+    header nav {
+        /*width: 400px;*/
+        float: right;
+        margin: 19px 46px 5px 0;
+        padding: 0 96px 0 0;
+    }
+    /*导航栏内超链接间距*/
+    header nav a {
+        float: left;
+        margin-left: 20px;
+        color: #666;
+        line-height: 24px;
+        font-size: 13px;
+        /*float: right;*/
+    }
+    /*设置超链接a在其链接地址已被访问过时的样式*/
+    header nav a:visited {
+        color: #333;
+    }
+    /*元素在其鼠标悬停时的样式*/
+    header nav a:hover {
+        color: #00c;
+    }
+    /*元素在其鼠标悬停时的样式*/
+    header nav a:active {
+        color: #00c;
+    }
+    /*主体*/
+    .content {
+        text-align: center;
+        top: 38.2%;
+        position: relative;
+    }
+    .content form {
+        position: relative;
+    }
+    .search_form {
+        height: 191px;
+        top: -239px;
+        position: relative;
+        margin-left: 27px;
+    }
+    /*照相机引入*/
+    .search_form .icon_camera {
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 26px;
+        height: 24px;
+        top: 9px;
+        right: 136px;
+        background: url(../imgs/camera.png) 4px 4px no-repeat;
+        cursor: pointer;
+    }
+    .search_form .icon_camera:hover {
+        background: url(../imgs/camera.png) 4px -16px no-repeat;
+    }
+    /*百度logo大小*/
+    .content img {
+        width: 270px;
+        height: 129px;
+        margin-bottom: 22px;
+        margin-left: -27px;
+    }
+    /*输入框*/
+    .content .search_input {
+        width: 534px;
+        height: 28px;
+        border: 1px solid #ddd;
+        border-right-width: 0;
+        padding: 3px 0 3px 7px;
+        vertical-align: middle;
+    }
+    /*鼠标移开后边框颜色*/
+    .content .search_input:visited {
+        border-color: #ddd;
+    }
+    /*鼠标停留时边框颜色*/
+    .content .search_input:hover {
+        border-color: #999 transparent #b3b3b3 #999;
+    }
+    /*聚焦时边框颜色*/
+    .content .search_input:focus {
+        border-collapse: #4791ff transparent #4791ff #4791ff;
+    }
+    /*按钮*/
+    .content .search_submit {
+        margin-left: -5px;
+        width: 100px;
+        height: 36px;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background: #3385ff;
+        /*按钮底部边框实线与颜色*/
+        border-bottom: 1px solid #2d78f4;
+        vertical-align: middle;
+        /*取消边框*/
+        border: none;
+        /*点击时取消边框显示*/
+        outline: medium;
+        /*手指图标*/
+        cursor: pointer;
+    }
+    /*鼠标停留时颜色*/
+    .content .search_submit:hover {
+        background-color: #317ef3;
+    }
+    /*鼠标点击时颜色*/
+    .content .search_submit:active {
+        background-color: #3075dc;
+        box-shadow: 1px 1px 5px inset #2964bb;
+        -webkit-box-shadow: 1px 1px 5px inset #2964bb;
+        -moz-box-shadow: 1px 1px 5px inset #2964bb;
+    }
+    /*“设置”样式*/
+    .setting {
+        font-size: 13px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        position: absolute;
+        /*padding-top: 23px;*/
+        right: 96px;
+        float: right;
+    }
+    /*访问前颜色*/
+    .setting a:link {
+        color: black;
+    }
+    /*访问后颜色*/
+    .setting a:visited {
+        color: black;
+    }
+    /*鼠标停留时颜色*/
+    .setting a:hover {
+        color: blue;
+    }
+    /*鼠标停留前隐藏*/
+    .setting ul {
+        display: none;
+    }
+    /*鼠标停留时显示*/
+    .setting:hover ul {
+        display: block;
+    }
+    /*“设置”的下拉框样式*/
+    /*三角形内白色部分*/
+    .setting ul {
+        list-style-type: none;
+        text-align: center;
+        position: absolute;
+        top: 27px;
+        /*left: -18px;*/
+        height: 104px;
+        width: 70px;
+        box-shadow: 0px 0px 3px #000;
+        -moz-box-shadow: 0px 0px 3px #000;
+        -webkit-box-shadow: 0px 0px 3px #000;
+        -ms-box-shadow: 0px 0px 3px #000;
+        z-index: 3;
+        line-height: 26px;
+    }
+    /*三角形外黑色部分*/
+    .setting ul .Triangle2 {
+        position: absolute;
+        margin-left: 28px;
+        margin-top: -14px;
+        width: 0;
+        height: 0px;
+        border: 7px solid;
+        background-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        /* border-bottom-color: #27a52c; */
+        border-bottom-color: black;
+        border-top-color: transparent;
+        z-index: 2;
+    }
+    .setting ul .Triangle1 {
+        position: absolute;
+        margin-left: 29px;
+        margin-top: -13px;
+        width: 0;
+        height: 0px;
+        border: 6px solid;
+        background-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        /* border-bottom-color: #27a52c; */
+        border-bottom-color: white;
+        border-top-color: transparent;
+        z-index: 3;
+    }
+    /*"设置"下拉框内背景颜色和字体*/
+    .font1:hover,
+    .font2:hover,
+    .font3:hover,
+    .font4:hover {
+        background-color: blue;
+        color: white;
+    }
+    /*“更多产品”布局*/
+    .more {
+        position: absolute;
+        right: 10px;
+        width: 60px;
+        height: 23px;
+        float: left;
+        color: #fff;
+        background: #38f;
+        line-height: 24px;
+        font-size: 13px;
+        text-align: center;
+        overflow: hidden;
+        border-bottom: 1px solid #38f;
+        margin-left: 19px;
+        margin-right: 2px;
+        text-decoration: none;
+    }
+    /*底部部分*/
+    footer {
+        /*text-align: left;*/
+        /*text-align: center;*/
+        height: 100px;
+        position: absolute;
+        bottom: 22px;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 0;
+        overflow: hidden;
+        text-align: left;
+    }
+    .bottom {
+        color: #999;
+        overflow: hidden;
+        margin: 0 auto;
+        text-align: center;
+        /*text-align: left;*/
+    }
+    /*二维码*/
+    footer .bottom .QRCode {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+    .QRCode_1,
+    .QRCode_2 {
+        /*display: inline-block;*/
+        float: left;
+        /*   width: 122px;
+    height: 60px;*/
+    }
+    .QRCode_1_img,
+    .QRCode_2_img {
+        /*display: inline-block;*/
+        float: left;
+        width: 60px;
+        height: 60px;
+    }
+    .QRCode_1_font,
+    .QRCode_2_font {
+        /*display: inline-block;*/
+        float: left;
+        color: #666;
+        line-height: 23px;
+        margin: 8px 0 0 10px;
+    }
+    .QRCode_1_font p,
+    .QRCode_2_font p {
+        width: 52px;
+        text-align: left;
+    }
+    /*两个二维码间距*/
+    .QRCode_2 {
+        margin-left: 33px;
+    }
+    .bottom_a {
+        text-align: left;
+        margin-left: 33px;
+        line-height: 22px;
+        top: -2px;
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+    .bottom_a p:nth-child(2) {
+        height: 24px;
+    }
+    .bottom_a p:nth-child(3) {
+        height: 24px;
+    }
+}
+
+
+/*底部超链接样式*/
+
+p a:link {
+    color: grey;
+}
+
+p a:visited {
+    color: grey;
+}
+
+
+/*响应式：浏览器小于480px的样式*/
+
+@media only screen and (max-width:480px) {
+    html {
+        font-size: 62.5%;
+    }
+    header nav,
+    footer .bottom .QRCode,
+    footer .bottom .bottom_a > p:nth-child(1) {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+    }
+        .wrapper{
+        /*background: #f8f8f8;*/
+        height: 100%;
+        min-width: 300px;
+        min-height: 560px;
+        position: relative;
+    }
+    /*主体部分*/
+    .content {
+        text-align: center;
+    
+        position: relative;
+    }
+    .content form {
+        position: relative;
+    }
+    /*麦克风引入*/
+    .search_form .icon_camera {
+        position: absolute;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 26px;
+        height: 24px;
+        top: 10%;
+        right: 29%;
+        background: url(../imgs/mmsicon.png) 13px 4px no-repeat;
+        background-size: 33px 19px;
+    }
+    /*百度logo大小*/
+    .content img {
+        width: 270px;
+        height: 129px;
+        margin-bottom: 22px;
+        margin-left: -27px;
+    }
+    /*输入框*/
+    .content .search_input {
+        width: 70%;
+        height: 28px;
+        border: 1px solid #ddd;
+        border-right-width: 0;
+        padding: 3px 0 3px 7px;
+        vertical-align: middle;
+    }
+    /*按钮*/
+    .content .search_submit {
+        margin-left: -5px;
+        width: 25%;
+        height: 36px;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background: #3385ff;
+        /*按钮底部边框实线与颜色*/
+        border-bottom: 1px solid #2d78f4;
+        vertical-align: middle;
+        /*取消边框*/
+        border: none;
+    }
+    /*导航栏*/
+    .phoneNav {
+        width: 100%;
+    }
+    .phoneNav ul li {
+        display: inline-block;
+        width: 14%;
+        padding: 20px 0px 10px 1%;
+    }
+
+    .phoneNav a i {
+        display: block;
+        width: 22px;
+        height: 22px;
+    }
+    .phoneNav a span {
+        color: #999;
+    }
+    /*导航栏图标*/
+    .xs-nav-icon1 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 264px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon2 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 132px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon3 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 198px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon4 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 66px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon5 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 110px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon6 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 264px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon7 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 44px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon8 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 176px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon9 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 242px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon10 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 88px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon11 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 154px;
+        background-size: 22px auto;
+    }
+    .xs-nav-icon12 {
+        background: url(../imgs/ns_diff_color_v2_5abf864a.png) 0px 220px;
+        background-size: 22px auto;
+    }
+
+    /*底部部分*/
+    footer {
+        position: absolute;
+        text-align: center;
+        bottom: 4%;
+        left: 0%;
+        right: 0%;
+        color: grey;
+        overflow: hidden;
+    }
+/*footer .bottom_a p a:nth-child(2),*/
+    footer .bottom_a p span:first-child{
+        display: none;
+    }
+}

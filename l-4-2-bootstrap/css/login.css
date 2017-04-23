@@ -1,0 +1,53 @@
+body {
+    background: url(../imgs/bg-1.png)no-repeat;
+}
+
+.wrapper{
+	position: relative;
+	min-width: 1000px;
+	min-height: 600px;
+}
+
+.login {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(28, 134, 198,0.4);
+    /*background:rgba(2, 8, 12, 0.4);*/
+    width: 500px;
+    height: 320px;
+    -webkit-box-shadow: 0 0 8px rgba(255,255,255,.51);
+	-moz-box-shadow: 0 0 8px rgba(255,255,255,.51);
+	box-shadow: 0 0 8px rgba(255,255,255,.51);
+	border: solid 1px rgba(133,209,237,.56);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+.logo{
+	width: 100px;
+	height: 100px;
+	position:absolute;
+    margin-top: 13px;
+    margin-left: 60px;
+	background:url(../imgs/logo.png) 0px 0px no-repeat;
+}
+.font{
+	position:relative;
+    margin-top: 42px;
+    margin-left: 148px;
+	color: #fff;
+}
+.loginForm{
+	position:relative;
+	margin-top: 155px;
+	/*margin-left: 20px;*/
+}
+/*防止窗口缩小时位移*/
+.text-right{
+    padding-top: 7px;
+    margin-top: -5px;
+}

@@ -1,0 +1,305 @@
+body,
+div,
+img,
+header,
+nav,
+form,
+input,
+span,
+i,
+a {
+    margin: 0;
+    padding: 0;
+    color: #555;
+}
+
+img {
+    width: 240px;
+    height: auto;
+}
+
+header {
+    /*width: 100%;*/
+    min-width: 900px;
+    height: 135px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 2px #666;
+    -webkit-box-shadow: 0 0 2px #666;
+    -moz-box-shadow: 0 0 2px #666;
+    overflow: hidden;
+}
+
+.login {
+    float: right;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.login a {
+    font-size: 12px;
+    /*color: #555;*/
+}
+
+.s-tab {
+    height: 23px;
+    padding-top: 14px;
+    margin-left: 195px;
+}
+
+.s-tab a,
+.s-tab b {
+    margin-right: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+.search-wrap,
+.search-box form {
+    position: relative;
+}
+
+
+/*fixed 的样式-------begin---*/
+
+.fixed {
+    /*height: 80px;*/
+    top: 0;
+    width: 100%;
+    padding-top: 8px;
+    position: fixed;
+    background: #fff;
+    z-index: 500;
+    min-width: 900px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 2px #666;
+    -webkit-box-shadow: 0 0 2px #666;
+    -moz-box-shadow: 0 0 2px #666
+}
+
+
+/*fixed 的样式------end---*/
+
+.search-wrap .bd-logo {
+    display: inline-block;
+    float: left;
+    margin-top: -10px;
+    margin-left: 40px;
+    margin-right: 16px;
+    width: 137px;
+    height: 46px;
+}
+
+.bd-logo img {
+    display: inline-block;
+    width: 137px;
+    height: 46px;
+}
+
+.fiex-logo {
+    display: none;
+    left: 35px;
+    float: left;
+    margin-left: 40px;
+    margin-right: 16px;
+    width: 117px;
+    height: 38px;
+}
+
+.fiex-logo img {
+    width: 117px;
+    height: 38px;
+}
+
+
+/*照相机引入*/
+
+.search-wrap .icon_camera {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 26px;
+    height: 24px;
+    top: 9px;
+    right: 136px;
+    background: url(../imgs/camera.png) 4px 4px no-repeat;
+    cursor: pointer;
+}
+
+.search-wrap .icon_camera:hover {
+    background: url(../imgs/camera.png) 4px -16px no-repeat;
+}
+
+
+/*输入框*/
+
+.search_input {
+    width: 534px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-right-width: 0;
+    padding: 3px 0 3px 7px;
+    vertical-align: middle;
+}
+
+
+/*鼠标移开后边框颜色*/
+
+.search_input:visited {
+    border-color: #ddd;
+}
+
+
+/*鼠标停留时边框颜色*/
+
+.search_input:hover {
+    border-color: #999 transparent #b3b3b3 #999;
+}
+
+
+/*聚焦时边框颜色*/
+
+.search_input:focus {
+    /*border: #4791ff;*/
+    border-collapse: #4791ff transparent #4791ff #4791ff;
+}
+
+
+/*按钮*/
+
+.search_submit {
+    margin-left: -8px;
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    /*按钮底部边框实线与颜色*/
+    border-bottom: 1px solid #2d78f4;
+    vertical-align: middle;
+    /*取消边框*/
+    border: none;
+    /*点击时取消边框显示*/
+    outline: medium;
+    /*手指图标*/
+    cursor: pointer;
+}
+
+
+/*鼠标停留时颜色*/
+
+.search_submit:hover {
+    background-color: #317ef3;
+}
+
+
+/*鼠标点击时颜色*/
+
+.search_submit:active {
+    background-color: #3075dc;
+    box-shadow: 1px 1px 5px inset #2964bb;
+    -webkit-box-shadow: 1px 1px 5px inset #2964bb;
+    -moz-box-shadow: 1px 1px 5px inset #2964bb;
+}
+
+.search-wrap .hot-point {
+    position: relative;
+    height: 38px;
+    line-height: 38px;
+    /*min-width: 900px;*/
+    overflow: hidden;
+}
+
+.hot-point span {
+    text-align: right;
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 10px;
+    height: 30px;
+    width: 86px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #666;
+}
+
+.hot-point span i {
+    display: inline-block;
+    position: absolute;
+    height: 19px;
+    width: 15px;
+    top: 3px;
+    left: 48px;
+    background: url(../imgs/search-icon.png) 0 5px no-repeat;
+}
+
+.hot-point a {
+    color: #00c;
+    padding-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.hot-point a:hover {
+    text-decoration: underline;
+}
+
+.sort {
+    position: absolute;
+    top: 50px;
+    left: 876px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: -27px;
+}
+
+.sort .sort-show {
+    position: relative;
+    display: block;
+    /*display: none;*/
+    text-decoration: underline;
+}
+
+.sort-show i {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: -13px;
+    width: 0;
+    height: 0;
+    border-width: 4px 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #888;
+}
+
+.sort .sort-hid {
+    display: none;
+    /*display: block;*/
+}
+
+
+/*瀑布流效果*/
+
+.img-wrap {
+    /*min-width: 950px;*/
+    /*margin-top: 20px;*/
+    /*margin-left: 20px;*/
+    margin: 0 auto;
+}
+
+.box {
+    position: relative;
+    float: left;
+}
+
+.content {
+    padding: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 3px;
+    -webkit-box-shadow: 0 0 3px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

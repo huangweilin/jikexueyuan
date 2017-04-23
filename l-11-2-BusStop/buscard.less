@@ -1,0 +1,153 @@
+/*边框颜色*/
+
+@borderColor: #343434;
+
+/*本站标题颜色*/
+
+@headbase: #5858ca;
+
+/*背景颜色*/
+
+@bgcolor: #fff;
+
+/*线路背景颜色*/
+
+@roadcolor: #cd4848;
+
+/*圆角*/
+
+.border-radius (@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+html,
+body,
+header,
+article,
+div,
+p,
+span,
+ul,
+li,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    background: #dfdfdf;
+    position: relative;
+}
+
+.buscard {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 1200px;
+    min-height: 400px;
+    overflow: auto;
+}
+/*本站点*/
+header {
+    text-align: center;
+    border: 20px solid @borderColor;
+    .border-radius(5px);
+    h1 {
+        font-size: 50px;
+        color: @bgcolor;
+        background: @headbase;
+        height: 80px;
+        padding-top: 10px;
+    }
+    h2 {
+        color: @headbase;
+        background: @bgcolor;
+        height: 40px;
+    }
+}
+
+article {
+    border: 20px solid @borderColor;
+    .border-radius(5px);
+    background: @bgcolor;
+}
+
+.cardbody {
+    margin: 18px;
+    position: relative;
+    ul {
+        list-style-type: none;
+        overflow: auto;
+        li {
+            float: left;
+            display: inline-block;
+            position: relative;
+            width: 560px;
+            height: 148px;
+            border: 1px solid @roadcolor;
+            margin-top: 15px;
+        }
+    }
+}
+/*线路编号*/
+.road {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    background: @roadcolor;
+    width: 100px;
+    p {
+        .border-radius(70%);
+        background: @bgcolor;
+        font-size: 24px;
+        width: 75px;
+        height: 50px;
+        line-height: 50px;
+        margin: 20px 0 15px 12px;
+    }
+    span {
+        color: @bgcolor;
+        font-size: 13px;
+    }
+}
+/*起始时间和站点*/
+.start-end {
+    float: left;
+    width: 458px;
+    height: 30px;
+    border: 1px solid @bgcolor;
+    background: @roadcolor;
+    span {
+        color: @bgcolor;
+        &:nth-child(1) {
+            margin-left: 10px;
+            float: left;
+        }
+        &:nth-child(2) {
+            margin-left: 80px;
+            font-size: 12px;
+            border-bottom: 2px solid @bgcolor;
+        }
+        &:nth-child(3) {
+            margin-right: 10px;
+            float: right;
+        }
+    }
+}
+/*途径站点*/
+.sites {
+    span {
+        float: left;
+        width: 13px;
+        font-size: 13px;
+    }
+}
+/*本站点*/
+.localsite {
+    color: @roadcolor;
+    font-weight:600;
+}

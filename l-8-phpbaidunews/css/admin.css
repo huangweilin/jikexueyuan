@@ -1,0 +1,19 @@
+#newstable {
+    table-layout: fixed;
+}
+
+#tbody td {
+/*    word-wrap: break-word;
+    word-break: break-all;
+    height: 50px;*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*#tbody tr:hover td{
+    height:auto;
+    overflow:visible;
+    white-space:normal ;
+    text-overflow:clip ;
+}*/

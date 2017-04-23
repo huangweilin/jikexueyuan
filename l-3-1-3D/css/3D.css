@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 300px auto;
+    height: 300px;
+    width: 300px;
+}
+
+.box {
+  /*动画效果*/
+    -webkit-animation-name: animation;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    /*申明为3D*/
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*观看视角*/
+    /*-webkit-perspective: 300;*/
+    /*-webkit-perspective-origin:-57px -64px;*/
+    /*perspective-origin:-57px -64px;*/
+    /*旋转中心点*/
+    transform-origin: 77px 77px 0;
+    -webkit-transform-origin: 77px 77px 0;
+}
+
+@-webkit-keyframes animation {
+    0% {
+        -webkit-transform: rotateX(0deg);
+        /*-webkit-transform: rotate3d(1,1,1,0deg ) ;*/
+   }
+     25% {
+        -webkit-transform: rotateY(90deg);
+    }
+    50% {
+        -webkit-transform: rotateZ(180deg);
+    }
+    75% {
+        -webkit-transform: rotateY(270deg);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg);
+    }
+}
+
+
+/*魔方的6面*/
+
+.sixside {
+    width: 154px;
+    height: 154px;
+    position: absolute;
+    border: 1px solid black;
+    /*display: block;*/
+}
+
+
+/*6个面的位置*/
+
+.A-side {
+    -webkit-transform: translateZ(77px);
+}
+
+.B-side {
+    -webkit-transform: translateY(77px) rotateX(90deg);
+}
+
+.C-side {
+    -webkit-transform: translateY(-77px) rotateX(90deg);
+}
+
+.D-side {
+    -webkit-transform: translateX(-77px) rotateY(90deg);
+}
+
+.E-side {
+    -webkit-transform: translateX(77px) rotateY(90deg);
+}
+
+.F-side {
+    -webkit-transform: translateZ(-77px);
+}
+
+
+/*每个小方块样式*/
+
+.block {
+    width: 50px;
+    height: 50px;
+    /*position: absolute;*/
+    background-color: blue;
+    border-radius: 4px;
+    float: left;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+
+/*每个小方块颜色*/
+
+.A-side .block {
+    background-color: #0000ff;
+}
+
+.B-side .block {
+    background-color: #ffff00;
+}
+
+.C-side .block {
+    background-color: #ff00ff;
+}
+
+.D-side .block {
+    background-color: #008800;
+}
+
+.E-side .block {
+    background-color: #ff0000;
+}
+
+.F-side .block {
+    background-color: #1df58f;
+}

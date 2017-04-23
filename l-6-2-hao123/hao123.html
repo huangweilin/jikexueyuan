@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>hao123</title>
+    <link rel="stylesheet" type="text/css" href="hao123.css">
+</head>
+
+<body onload="getSkin()">
+    <div class="wrapp">
+        <header>
+            <div class="header-tool width">
+                <div class="logo">
+                    <a class href="#">
+                        <img src="imgs/richanglogo168_24.png" alt="上网从hao123开始">
+                    </a>
+                </div>
+                <div class="home-page">
+                    <span>设为首页</span>
+                </div>
+                <div class="weather" id="weather">
+                    <div class="weahter-city" id="weahter-city">
+                        <span class="">泉州</span>
+                        <span class="triangle1" id="tri1"></span>
+                    </div>
+                    <a href="#" class="weahter-info">
+                        <span class="weahter-icon"></span>
+                        <span>多云</span>
+                        <span>17 ~ 10℃</span>
+                        <span class="triangle2">
+                		</span>
+                    </a>
+                </div>
+                <div class="cities" id="cities" style="display: none">
+                    <div class="city-arr">
+                        <select class="select province">
+                            <option value="01">B 北京</option>
+                            <option value="06" selected>F 福建</option>
+                        </select>
+                        <select class="select city">
+                            <option value="01">F 福州</option>
+                            <option value="06" selected>Q 泉州</option>
+                        </select>
+                        <select class="select county">
+                            <option value="01" selected>Q 泉州</option>
+                            <option value="06">A 安溪</option>
+                        </select>
+                    </div>
+                    <a href="#" class="save">确定</a>
+                    <a href="#" class="cancle">取消</a>
+                </div>
+                <div class="date">
+                    <span class="month" id="month">1月09日</span>
+                    <span class="weekday" id="weekday">周一</span>
+                    <div class="spring">
+                        <div class="play">
+                            <a>十二月二十二</a>
+                            <a>春运抢票</a>
+                            <a>十二月二十二</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar"></div>
+                <div class="star1" id="star1">
+                    <a href="#">星座运势</a>
+                    <!-- style="display: none" -->
+                    <div class="star2" id="star2" style="display: none">
+                        <div class="bg">
+                            <a href="#" class=""></a>
+                        </div>
+                        <div class="intro">
+                            <div class="intro-con">
+                                <a href="#" class="title">魔蝎座</a>
+                                <div class="stars-outer">
+                                    <i class="stars-inner"></i>
+                                </div>
+                                <span class="star-date">12月22日-1月19日</span>
+                                <span class="comment">感情较平淡，不妨花点心思送份小礼物或下厨准备爱心晚餐，可让感情生活更丰富。</span>
+                                <div class="fortune">
+                                    <a href="#">本周运势</a>
+                                    <a href="#">本月运势</a>
+                                    <a href="#">本年运势</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="star-nav">
+                            <a href="#">白羊座</a>
+                            <a href="#">金牛座</a>
+                            <a href="#">双子座</a>
+                            <a href="#">巨蟹座</a>
+                            <a href="#">狮子座</a>
+                            <a href="#">处女座</a>
+                            <a href="#">天秤座</a>
+                            <a href="#">天蝎座</a>
+                            <a href="#">射手座</a>
+                            <a href="#">摩羯座</a>
+                            <a href="#">水瓶座</a>
+                            <a href="#">双鱼座</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="headjoke-box">
+                    <i class="smile"></i>
+                    <span>猜靳东救叶亦心吗 </span>
+                </div>
+                <div class="links">
+                    <div class="login dm">
+                        <a href="#">登录</a>
+                    </div>
+                    <a href="#" class="pan dm">网盘</a>
+                    <div class="mail dm" id="mail1">
+                        <span>邮箱</span>
+                        <div class="maillogin" id="maillogin" style="display: none">
+                            <form class="mailform" method="post" action="https://reg.163.com/CheckUser.jsp">
+                                <input type="text" name="mailname" placeholder="邮箱账号">
+                                <select class="mailend">
+                                    <option value="01" selected>@163.com</option>
+                                    <option value="02">@qq.com</option>
+                                </select>
+                                <input type="text" name="mailpwd" placeholder="邮箱密码">
+                                <input type="submit" name="" value="登录" class="submit">
+                                <span id="cancel">取消</span>
+                            </form>
+                            <label>
+                                <input type="checkbox" name="agree" class="checkbox" value="">我阅读并同意使用协议
+                            </label>
+                        </div>
+                    </div>
+                    <div class="browse dm">浏览器</div>
+                    <div class="skin dm">换肤</div>
+                </div>
+                <!-- style="display: none" -->
+            </div>
+        </header>
+        <div class="body" id="bgcolor">
+            <div class="search-panel-box-outer">
+                <div class="search-panel-box" id="scroll1">
+                    <div class="search-panel width">
+                        <div class="search">
+                            <div class="leftlogo">
+                                <a href="https://www.baidu.com" target="_blank"></a>
+                            </div>
+                            <div class="searchform">
+                                <form action="https://www.baidu.com/s" method="get" target="_blank">
+                                    <input type="text" name="wd" class="input" id="ipu" placeholder="搜你想搜的">
+                                    <input type="submit" name="" value="" class="baidubtn">
+                                    <span class="news-num" id="news-num">5</span>
+                                    <div class="news" id="news" style="display: none">
+                                        <ul>
+                                            <li>
+                                                <span class="news-icon news-icon-index">1</span> 意大利地震引雪崩
+                                                <span class="news-icon news-icon-new">新!</span>
+                                            </li>
+                                            <li>
+                                                <span class="news-icon news-icon-index">2</span> 大妈空手夺白刃
+                                                <span class="news-icon news-icon-new">新!</span>
+                                            </li>
+                                            <li>
+                                                <span class="news-icon news-icon-index">3</span> 男子火车钻女被窝
+                                                <span class="news-icon news-icon-new">新!</span>
+                                            </li>
+                                            <li>
+                                                <span class="news-icon news-icon-index news-icon-dark">4</span> lol商城出现bug
+                                            </li>
+                                            <li>
+                                                <span class="news-icon news-icon-index news-icon-dark">5</span> 醉倒草丛误被击毙
+                                            </li>
+                                            <li>
+                                                <span class="news-icon news-icon-index news-icon-dark">6</span> apa酒店事件
+                                            </li>
+                                            <li>
+                                                <span class="news-icon news-icon-index news-icon-dark">7</span> 李玉刚经纪人诈骗
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="show-tab" id="show-tab">
+                                <span id="show-tab-list">网页</span>
+                                <i class="triangle1" id="tri3"></i>
+                            </div>
+                            <div class="tabs" id="tabs" style="display: none">
+                                <ul id="tabs-list">
+                                    <li><a href="#" class="tab">网页</a></li>
+                                    <li><a href="#" class="tab">音乐</a></li>
+                                    <li><a href="#" class="tab">视频</a></li>
+                                    <li><a href="#" class="tab">图片</a></li>
+                                    <li><a href="#" class="tab">贴吧</a></li>
+                                    <li><a href="#" class="tab">知道</a></li>
+                                    <li><a href="#" class="tab">新闻</a></li>
+                                    <li><a href="#" class="tab">地图</a></li>
+                                    <li><a href="#" class="tab">更多>></a></li>
+                                </ul>
+                            </div>
+                            <div class="skin-change" id="skin-change">
+                                <span>点击换肤：</span>
+                                <i class="skin-1" id="skin-1" style="background:#fafafa"></i>
+                                <i class="skin-2" id="skin-2" style="background:#aeacfd"></i>
+                                <i class="skin-3" id="skin-3" style="background:#a9efa9"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotsearchCon " id="scroll2">
+                        <div class="hot-nav">
+                            <div class="hotsearchtop">
+                                <ul>
+                                    <li class="tilte">
+                                        <a href="#">
+                                        </a>
+                                    </li>
+                                    <li class="text">
+                                        <a href="#">泉州天气
+                                </a>
+                                    </li>
+                                    <li class="text">
+                                        <a href="#">英超
+                                </a>
+                                    </li>
+                                    <li class="text">
+                                        <a href="#">春联大全
+                                </a>
+                                    </li>
+                                    <li class="text">
+                                        <a href="#">周立波被捕
+                                </a>
+                                    </li>
+                                    <li class="text">
+                                        <a href="#">特朗普走马上任
+                                </a>
+                                    </li>
+                                    <li class="text">
+                                        <a href="#">支付宝五福
+                                </a>
+                                    </li>
+                                    <li class="text">
+                                        <a href="#">angelababy出院
+                                </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-wrap width">
+                <ul>
+                    <li class="first">
+                        <a href="#">
+                            <span class="menu-title">首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>电视剧</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>最新电影</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>新闻头条</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>八卦娱乐</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>军事热点</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li id="hot-game">
+                        <a href="https://game.hao123.com/" target="_blank">
+                            <span>热门游戏</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>小游戏</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>今日特价</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>特价旅游</span>
+                            <span class="menu-split"></span>
+                        </a>
+                    </li>
+                    <li class="last">
+                        <a href="#">
+                            <span>泉州生活</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hot-game" style="display: none" id="hot-game2">
+                	<a href="https://game.hao123.com/" target="_blank">
+                		<img src="imgs/27c4e279061e8bc7d2d800e77c57168e.png">
+                	</a>
+                </div>
+            </div>
+            <div class="govsite-top width">
+                <span>权威推荐</span>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">人民网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">新华网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">央视网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">国际在线</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">中国日报网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">中国网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">中国经济网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">光明网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">央广网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">求是网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">中国青年网</a>
+                </div>
+                <div>
+                    <a href="http://www.people.com.cn/" target="_blank">中国网信网</a>
+                </div>
+            </div>
+            <div class="other"></div>
+        </div>
+        <footer>
+        </footer>
+    </div>
+    <script type="text/javascript" src="hao123.js"></script>
+</body>
+
+</html>

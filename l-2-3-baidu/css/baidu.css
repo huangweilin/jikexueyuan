@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/*导航部分*/
+
+body {
+    font: 12px arial;
+}
+
+
+/*设置容器宽高，防止窗口缩小时图片。文字等被挤掉*/
+
+.wrapper {
+    height: 100%;
+    min-width: 810px;
+    min-height: 650px;
+    position: relative;
+}
+
+header {
+    overflow: hidden;
+}
+
+
+/*导航样式*/
+
+header nav {
+    /*width: 400px;*/
+    float: right;
+    margin: 19px 46px 5px 0;
+    padding: 0 96px 0 0;
+}
+
+
+/*导航栏内超链接间距*/
+
+header nav a {
+    float: left;
+    margin-left: 20px;
+    color: #666;
+    line-height: 24px;
+    font-size: 13px;
+    /*float: right;*/
+}
+
+
+/*设置超链接a在其链接地址已被访问过时的样式*/
+
+header nav a:visited {
+    color: #333;
+}
+
+
+/*元素在其鼠标悬停时的样式*/
+
+header nav a:hover {
+    color: #00c;
+}
+
+
+/*元素在其鼠标悬停时的样式*/
+
+header nav a:active {
+    color: #00c;
+}
+
+
+/*主体*/
+
+.content {
+    text-align: center;
+    top: 38.2%;
+    position: relative;
+}
+
+.content form {
+    position: relative;
+}
+
+.search_form {
+    /*   height: 191px;
+    top: -217px;
+    position: relative;*/
+    height: 191px;
+    top: -239px;
+    position: relative;
+    margin-left: 27px;
+}
+
+
+/*  麦克风引入，还没有图片
+.search_form .icon_mic{
+    position: absolute;
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    top: 1px;
+    right:95px;
+    background: url(../imgs/mic_icon.png) -24px -2px no-repeat;
+    cursor:pointer;
+}
+.search_form .icon_mic:hover{
+    background: url(../imgs/mic_icon.png) -24px -23px no-repeat;
+}*/
+
+
+/*照相机引入*/
+
+.search_form .icon_camera {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    top: 8px;
+    right: 130px;
+    background: url(../imgs/camera.png) 4px 4px no-repeat;
+    cursor: pointer;
+}
+
+.search_form .icon_camera:hover {
+    background: url(../imgs/camera.png) 4px -16px no-repeat;
+}
+
+
+/*百度logo大小*/
+
+.content img {
+    width: 270px;
+    height: 129px;
+    margin-bottom: 22px;
+    margin-left: -27px;
+}
+
+
+/*输入框*/
+
+.content .search_input {
+    width: 533px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-right-width: 0;
+    padding: 3px 0 3px 7px;
+    vertical-align: middle;
+}
+
+
+/*鼠标移开后边框颜色*/
+
+.content .search_input:visited {
+    border-color: #ddd;
+}
+
+
+/*鼠标停留时边框颜色*/
+
+.content .search_input:hover {
+    border-color: #999 transparent #b3b3b3 #999;
+}
+
+
+/*聚焦时边框颜色*/
+
+.content .search_input:focus {
+    border-collapse: #4791ff transparent #4791ff #4791ff;
+}
+
+
+/*按钮*/
+
+.content .search_submit {
+    margin-left: -5px;
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    /*按钮底部边框实线与颜色*/
+    border-bottom: 1px solid #2d78f4;
+    vertical-align: middle;
+    /*取消边框*/
+    border: none;
+    /*点击时取消边框显示*/
+    outline: medium;
+    /*手指图标*/
+    cursor: pointer;
+}
+
+
+/*鼠标停留时颜色*/
+
+.content .search_submit:hover {
+    background-color: #317ef3;
+}
+
+
+/*鼠标点击时颜色*/
+
+.content .search_submit:active {
+    background-color: #3075dc;
+    -webkit-box-shadow: 1px 1px 5px inset #2964bb;
+}
+
+
+/*“设置”样式*/
+
+
+.setting {
+    font-size: 13px;
+    display: inline-block;
+    position: absolute;
+    /*padding-top: 23px;*/
+    right: 96px;
+    float: right;
+}
+
+
+/*访问前颜色*/
+
+
+.setting a:link {
+    color: black;
+}
+
+
+
+/*访问后颜色*/
+
+
+.setting a:visited {
+    color: black;
+}
+
+
+
+/*鼠标停留时颜色*/
+
+
+.setting a:hover {
+    color: blue;
+}
+
+
+
+/*鼠标停留前隐藏*/
+
+
+.setting ul {
+    display: none;
+}
+
+
+
+/*鼠标停留时显示*/
+
+
+.setting:hover ul {
+    display: block;
+}
+
+
+
+/*“设置”的下拉框样式*/
+
+
+.setting ul {
+    list-style-type: none;
+    text-align: center;
+    position: absolute;
+    top:30px;
+    /*left: -18px;*/
+    height: 104px;
+    width: 70px;
+    box-shadow: 0px 0px 3px #000;
+    z-index: 2;
+    line-height: 26px;
+}
+
+
+/*"设置"下拉框内背景颜色和字体*/
+
+
+.font1:hover,
+.font2:hover,
+.font3:hover,
+.font4:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+/*“更多产品”布局*/
+
+.more {
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: #fff;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+
+
+/*鼠标停留时显示*/
+
+
+/*.more ul {
+    list-style-type: none;
+    width: 80px;
+    line-height: 26px;
+    color: black;
+    top: 0px;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+}*/
+
+
+/*.more ul li {
+    background-color: #f9f9f9;
+}
+*/
+
+
+/*鼠标停留此处前隐藏*/
+
+
+/*.more ul {
+    display: none;
+}
+*/
+
+
+/*鼠标停留此处时显示*/
+
+
+/*.more:hover ul {
+    display: block;
+}*/
+
+
+/*底部部分*/
+
+footer {
+    /*text-align: left;*/
+    /*text-align: center;*/
+    height: 100px;
+    position: absolute;
+    bottom: 23px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bottom {
+    color: #999;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    /*text-align: left;*/
+}
+
+
+/*二维码*/
+
+footer .bottom .QRCode {
+    display: inline-block;
+}
+
+.QRCode_1,
+.QRCode_2 {
+    display: inline-block;
+    width: 122px;
+    height: 60px;
+}
+
+.QRCode_1_img,
+.QRCode_2_img {
+    display: inline-block;
+    float: left;
+    width: 60px;
+    /*height: 60px;*/
+}
+
+.QRCode_1_font,
+.QRCode_2_font {
+    display: inline-block;
+    float: left;
+    color: #666;
+    line-height: 23px;
+    margin: 8px 0 0 10px;
+}
+/*两个二维码间距*/
+.QRCode_2 {
+    margin-left: 33px;
+}
+
+.bottom_a {
+    text-align: left;
+    margin-left: 33px;
+    line-height: 22px;
+    top: -2px;
+    position: relative;
+    display: inline-block;
+}
+
+
+/*底部超链接样式*/
+
+p a:link {
+    color: grey;
+}
+
+p a:visited {
+    color: grey;
+}

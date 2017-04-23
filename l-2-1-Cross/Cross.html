@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/homework3.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+        <img src="imgs/Monkey_D_Luffey.png">
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+    </div>
+</body>
+
+</html>
+<!-- 
+三种居中方式：
+/*知道容器宽高*/
+.wraper{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+/*不知道容器宽高*/
+.wraper{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+/*推荐方案*/
+.wraper{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin:auto;
+}
+
+三种排列方式：
+    1.5个子元素采用(relative)排列
+    2.5个子元素采用(float)排列
+    3.5个子元素采用(flex)或者（box-flex）排列
+
+
+ -->

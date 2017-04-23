@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新闻后台</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap3.3.7cssbootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">百度新闻后台</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-xs-12 ">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">新闻编辑</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="newstitle">新闻标题</label>
+                                <input type="text" class="form-control" id="newstitle" placeholder="请输入新闻标题，必填项">
+                            </div>
+                            <div class="form-group">
+                                <label for="newstype">新闻分类</label>
+                                <select class="form-control" id="newstype">
+                                    <option>精选</option>
+                                    <option>百家</option>
+                                    <option>本地</option>
+                                    <option>娱乐</option>
+                                    <option>社会</option>
+                                    <option>军事</option>
+                                    <option>女人</option>
+                                    <option>搞笑</option>
+                                    <option>互联网</option>
+                                    <option>科技</option>
+                                    <option>国际</option>
+                                    <option>国内</option>
+                                    <option>汽车</option>
+                                    <option>财经</option>
+                                    <option>房产</option>
+                                    <option>时尚</option>
+                                    <option>教育</option>
+                                    <option>游戏</option>
+                                    <option>旅游</option>
+                                    <option>人文</option>
+                                    <option>创意</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newssrc">新闻来源</label>
+                                <input type="text" class="form-control" id="newssrc" placeholder="新闻来源，必填项">
+                            </div>
+                            <div class="form-group">
+                                <label for="newshref">连接地址</label>
+                                <input type="text" class="form-control" id="newshref" placeholder="请输入连接地址，必填项">
+                            </div>
+                            <div class="form-group">
+                                <label for="newssrc">新闻时间</label>
+                                <input type="date" class="form-control" id="newstime">
+                            </div>
+                            <div class="form-group">
+                                <label for="newsimg1">图片地址1</label>
+                                <input type="text" class="form-control" id="newsimg1" placeholder="图片地址,可不填">
+                            </div>
+                            <div class="form-group">
+                                <label for="newsimg2">图片地址2</label>
+                                <input type="text" class="form-control" id="newsimg2" placeholder="图片地址,可不填">
+                            </div>
+                            <div class="form-group">
+                                <label for="newsimg3">图片地址3</label>
+                                <input type="text" class="form-control" id="newsimg3" placeholder="图片地址,可不填">
+                            </div>
+                            <button type="button" class="btn btn-primary" id="sumBtn">提交</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 col-xs-12">
+                <!-- 新闻列表 -->
+                <div class="panel panel-primary">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">新闻列表</div>
+                    <div class="panel-body">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                   <button class="btn btn-default" type="button" id="searchBtn">搜索</button>
+                                </span>
+                                <input type="text" class="form-control" placeholder="请输入要搜索的内容..." id="content">
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- Table -->
+                    <table class="table table-hover" id="newstable">
+                        <thead>
+                            <tr>
+                                <th width="4%">ID</th>
+                                <th>新闻标题</th>
+                                <th width="8%">新闻分类</th>
+                                <th width="8%">新闻来源</th>
+                                <th>连接地址</th>
+                                <th>新闻时间</th>
+                                <th>图片地址1</th>
+                                <th>图片地址2</th>
+                                <th>图片地址3</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination " id="pageadmin">
+                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li class="active"><a href="#">1 </a></li>
+                        <li id="page1"><a href="#">2 </a></li>
+                        <li><a href="#">3 </a></li>
+                        <li><a href="#">4 </a></li>
+                        <li><a href="#">5 </a></li>
+                        <li><a href="#">6 </a></li>
+                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- 删除弹出框 -->
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">警告</h4>
+                </div>
+                <div class="modal-body">
+                    删除后数据无法恢复！
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="del">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改弹出框 -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">修改</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="unewstitle">新闻标题</label>
+                            <input type="text" class="form-control" id="unewstitle" placeholder="请输入新闻标题，必填项">
+                        </div>
+                        <div class="form-group">
+                            <label for="unewstype">新闻分类</label>
+                            <select class="form-control" id="unewstype">
+                                <option>精选</option>
+                                <option>百家</option>
+                                <option>本地</option>
+                                <option>娱乐</option>
+                                <option>社会</option>
+                                <option>军事</option>
+                                <option>女人</option>
+                                <option>搞笑</option>
+                                <option>互联网</option>
+                                <option>科技</option>
+                                <option>国际</option>
+                                <option>国内</option>
+                                <option>汽车</option>
+                                <option>财经</option>
+                                <option>房产</option>
+                                <option>时尚</option>
+                                <option>教育</option>
+                                <option>游戏</option>
+                                <option>旅游</option>
+                                <option>人文</option>
+                                <option>创意</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="unewssrc">新闻来源</label>
+                            <input type="text" class="form-control" id="unewssrc" placeholder="新闻来源，必填项">
+                        </div>
+                        <div class="form-group">
+                            <label for="unewshref">连接地址</label>
+                            <input type="text" class="form-control" id="unewshref" placeholder="请输入连接地址，必填项">
+                        </div>
+                        <div class="form-group">
+                            <label for="unewssrc">新闻时间</label>
+                            <input type="date" class="form-control" id="unewstime">
+                        </div>
+                        <div class="form-group">
+                            <label for="unewsimg1">图片地址1</label>
+                            <input type="text" class="form-control" id="unewsimg1" placeholder="图片地址,可不填">
+                        </div>
+                        <div class="form-group">
+                            <label for="unewsimg2">图片地址2</label>
+                            <input type="text" class="form-control" id="unewsimg2" placeholder="图片地址,可不填">
+                        </div>
+                        <div class="form-group">
+                            <label for="unewsimg3">图片地址3</label>
+                            <input type="text" class="form-control" id="unewsimg3" placeholder="图片地址,可不填">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="update">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/jquery-3.1.1.min.js"></script>
+    <script src="script/bootstrap3.3.7jsbootstrap.min.js"></script>
+    <script type="text/javascript" src="script/admin.js"></script>
+</body>
+
+</html>

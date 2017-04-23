@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrap {
+    background: #eee;
+    position: relative;
+    min-height: 100%;
+}
+
+article {
+    background: #fff;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    width: 200px;
+    height: 250px;
+    background: #fff;
+    left: 50%;
+    top: 10%;
+    margin-left: 530px;
+}
+
+nav a {
+    display: block;
+    color: #333;
+    margin: 10px 0 0 20px;
+}

@@ -1,0 +1,128 @@
+/*浏览器背景颜色*/
+
+body {
+    background: #0d7792;
+}
+
+
+/*设置表格样式*/
+
+table {
+    border-collapse: collapse;
+    width: 720px;
+    font-size: 14px
+}
+
+
+/*单元格高度*/
+
+td {
+    height: 25px;
+}
+
+
+/*头部图片链接*/
+
+.nav1 {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+
+/*头部文字链接*/
+
+.nav2 {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+
+
+/*设置主体宽度，居中，背景颜色*/
+
+.tbody,
+.theader,
+.tfooter {
+    width: 800px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+
+/*设置头部左上和右上两边为半圆边框*/
+
+#theader {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 84px;
+}
+
+
+/*表格居中*/
+
+#tbody {
+    /*div模拟为伸缩盒*/
+    display: -webkit-box;
+    /*盒内水平居中*/
+    -webkit-box-pack: center;
+}
+
+#tfooter {
+    /*设置左下和右下两边为半圆边框*/
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 50px;
+    /*div模拟为伸缩盒*/
+    display: -webkit-box;
+    /*盒内水平居中*/
+    -webkit-box-pack: center;
+}
+
+
+/*提交框的大小*/
+
+.sumbit {
+    height: 80px;
+    text-align: center;
+}
+
+
+/*提交按钮的大小*/
+
+.sumbitsize {
+    width: 120px;
+    height: 35px;
+}
+
+
+/*左边单元格文字右对齐*/
+
+.testalignright {
+    text-align: right;
+}
+
+
+/*设置字体颜色为红色*/
+
+.colR {
+    color: #FF0000;
+}
+
+
+/*设置字体颜色为绿色*/
+
+.colG {
+    color: #003399;
+}
+
+
+/*设置分隔栏颜色*/
+
+.SeparatorBar {
+    background-color: #aed6d4;
+}

@@ -1,0 +1,59 @@
+body{
+    background-color: #C0C0C0;
+}
+
+
+/*设定5个div共有属性*/
+div {
+    /*长和宽*/
+    width: 100px;
+    height: 100px;
+    /*初始位置居中*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*阴影*/
+    box-shadow: 30px 25px 3px #000;
+}
+
+.top {
+    margin-left: -50px;
+    margin-top: -156px;
+    background-color: #005bcc;
+    /* z-index：2；图层高覆盖图层低的*/
+    z-index: 2;
+}
+
+.bottom {
+    margin-left: -50px;
+    margin-top: 56px;
+    background-color: #3a86d4;
+    z-index: 3;
+}
+
+.center {
+    margin-left: -50px;
+    margin-top: -50px;
+    background-color: #cc00cc;
+    z-index: 2;
+    /*div模拟为伸缩盒*/
+    display: -webkit-box;
+    /*盒内水平居中*/
+    -webkit-box-pack: center;
+    /*盒内垂直居中*/
+    -webkit-box-align: center;
+}
+
+.left {
+    margin-left: -156px;
+    margin-top: -50px;
+    background-color: #bcd247;
+    z-index: 1;
+}
+
+.right {
+    margin-left: 56px;
+    margin-top: -50px;
+    background-color: #3ad462;
+    z-index: 3;
+}

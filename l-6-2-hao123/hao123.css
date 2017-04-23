@@ -1,0 +1,1128 @@
+body,
+header,
+nav,
+footer,
+article,
+div,
+span,
+i,
+img,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+
+/*除去a标签的下划线*/
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/*主体的宽度*/
+
+.width {
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+    /*z-index: 1;*/
+}
+
+
+/*header -----------begin----------*/
+
+.header-tool {
+    position: relative;
+    height: 60px;
+    /*background: #e4dcdc;*/
+    font-size: 12px;
+    font-family: 'Tahoma';
+    color: #999;
+    /*line-height: 60px;	*/
+}
+
+
+/*logo*/
+
+.header-tool .logo {
+    float: left;
+    display: inline-block;
+    width: 168px;
+    height: 60px;
+}
+
+
+/*设为首页*/
+
+.header-tool .home-page {
+    float: left;
+    /*position: absolute;*/
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #34a637;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 13px;
+    margin-right: 22px;
+}
+
+.header-tool .home-page span {
+    display: inline-block;
+    width: 25px;
+    line-height: 1.4;
+    /*height: ;*/
+    color: white;
+}
+
+
+/*天气模块*/
+
+.header-tool .weather {
+    position: relative;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 110;
+}
+
+.weather:hover {
+    background-color: #f7f7f7;
+}
+
+.weather .weahter-city {
+    display: inline-block;
+    height: 60px;
+    /*padding-left: 9px;*/
+    /*line-height: 60px;*/
+    padding-right: 10px;
+    color: #999;
+}
+
+.triangle1 {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    background: url(imgs/index_widthlg.png) no-repeat;
+    background-position: -52px -97px;
+}
+
+.weather .weahter-info {
+    display: inline-block;
+    height: 60px;
+    color: #999;
+}
+
+.weahter-info span {
+    line-height: 60px;
+    display: inline-block;
+    height: 60px;
+}
+
+.weahter-icon {
+    vertical-align: middle;
+    width: 26px;
+    background: url(imgs/a1.png)0 14px no-repeat;
+}
+
+.weather .bg-triangle2 {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #34a637;
+}
+
+.weather .triangle2 {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: url(imgs/index_widthlg.png) -342px -251px no-repeat;
+}
+
+
+/*日期模块*/
+
+.header-tool .date {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 10;
+    /*width: 200px;*/
+}
+
+.date:hover,
+.star1:hover {
+    background-color: #f7f7f7;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.date:hover {
+    padding: 0 9px;
+}
+
+.date .month {
+    display: inline-block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+}
+
+.date .weekday {
+    display: inline-block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+}
+
+.date .spring {
+    display: inline-block;
+    height: 60px;
+    width: 75px;
+    overflow: hidden;
+    position: relative;
+}
+
+.date .play {
+    display: inline-block;
+    height: 60px;
+    width: 250px;
+    position: relative;
+    line-height: 60px;
+    text-align: center;
+    z-index: 5;
+    animation: play 10s linear infinite;
+    -webkit-animation: play 10s linear infinite;
+    -moz-animation: play 10s linear infinite;
+}
+
+.date .spring a {
+    display: inline-block;
+    height: 60px;
+    width: 75px;
+    float: left;
+    color: #999;
+}
+
+.date .spring a:nth-child(2) {
+    color: #ff3c00;
+    font-weight: bold;
+}
+
+
+/*日历模块*/
+
+.header-tool .calendar {
+    display: none;
+    position: absolute;
+    width: 346px;
+    padding-bottom: 20px;
+    background: #f7f7f8;
+    z-index: 5;
+    height: 240px;
+    top: 60px;
+    left: 427px;
+    border: 1px solid #d6d6d6;
+}
+
+
+/*星座运势*/
+
+.star1:hover {
+    margin-left: -1px;
+}
+
+.header-tool .star1 {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: 60px;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.header-tool .star1 a {
+    line-height: 60px;
+    color: #999;
+}
+
+
+/*星座运势*/
+
+.star2 {
+    /*display: none;*/
+    position: absolute;
+    top: 60px;
+    left: -1px;
+    width: 392px;
+    height: 210px;
+    background: #f7f7f7;
+    border: 1px solid #d6d6d6;
+    z-index: 5;
+}
+
+.star2 .bg {
+    float: left;
+    margin-top: 6px;
+    width: 150px;
+    height: 130px;
+}
+
+.star2 .bg a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(imgs/ff0ae30c452fc908f02f4fd930c57b79.png) no-repeat;
+}
+
+.star2 .intro {
+    overflow: hidden;
+    width: 190px;
+    color: #88baa9;
+}
+
+.intro .intro-con {
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.intro-con .title {
+    width: 62px;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: #666;
+    text-align: left;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+.intro-con .stars-outer {
+    display: inline-block;
+    width: 76px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.intro-con .stars-inner {
+    display: inline-block;
+    margin-left: -30px;
+    width: 137px;
+    height: 12px;
+    /*background: grey;*/
+    background: url(imgs/ff0ae30c452fc908f02f4fd930c57b79.png) -13px -1620px no-repeat;
+}
+
+.intro-con .star-date {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #9a9a9a;
+    text-align: left;
+}
+
+.intro-con .comment {
+    width: 180px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #9a9a9a;
+}
+
+.intro-con .fortune {
+    margin-top: 5px;
+}
+
+.intro-con .fortune a {
+    float: left;
+    display: inline;
+    margin-left: 4px;
+    width: 59px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    background: url(imgs/ff0ae30c452fc908f02f4fd930c57b79.png)-91px -1686px no-repeat;
+    color: #88baa9;
+}
+
+.star2 .star-nav {
+    overflow: hidden;
+    clear: left;
+    padding-top: 7px;
+}
+
+.star2 .star-nav a {
+    display: inline-block;
+    width: 61px;
+    height: 32px;
+    line-height: 32px;
+    margin: 1px 0 0 1px;
+    background: #eee;
+    text-align: center;
+    color: #676767;
+}
+
+
+/*定位城市-天气*/
+
+.cities {
+    /*display: inline-block;*/
+    position: absolute;
+    background: #f7f7f7;
+    left: 226px;
+    top: 60px;
+    width: 241px;
+    height: 97px;
+    padding: 20px 19px 0 20px;
+    border: 1px solid #d9d9d9;
+    z-index: 100;
+}
+
+.cities .city-arr .select {
+    float: left;
+    width: 118px;
+    margin-bottom: 10px;
+}
+
+.cities .city-arr .city {
+    margin-left: 5px;
+}
+
+.city-arr:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.cities .save {
+    display: inline-block;
+    width: 41px;
+    height: 22px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    color: #666;
+}
+
+.cities .cancle {
+    width: 41px;
+    height: 22px;
+    display: inline-block;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    color: #666;
+    margin-left: 11px;
+    vertical-align: top;
+}
+
+
+/*登录模块*/
+
+.header-tool .links {
+    display: inline-block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.dm {
+    display: inline-block;
+    height: 60px;
+    /*overflow: hidden;*/
+    position: relative;
+    padding: 0 4px;
+}
+
+.dm:hover {
+    background-color: #f7f7f7;
+}
+
+.links {
+    position: relative;
+}
+
+
+/*登录*/
+
+.links .login a {
+    /*width: 66px;*/
+    height: 60px;
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    line-height: 60px;
+    padding-left: 33px;
+    padding-right: 9px;
+    color: #999;
+    background-image: url(imgs/index_widthlg.png);
+    background-repeat: no-repeat;
+    background-position: -30px -110px;
+    z-index: 11;
+}
+
+
+/*网盘*/
+
+.links .pan {
+    color: #999;
+}
+
+.links span {
+    display: inline-block;
+    height: 60px;
+    /*width: 60px;*/
+}
+
+
+/*邮箱*/
+
+.links .maillogin {
+    display: block;
+    /*display: none;*/
+    position: absolute;
+    height: 90px;
+    width: 250px;
+    padding: 19px;
+    left: -1px;
+    border: 1px solid #d9d9d9;
+    background: #f7f7f7;
+    line-height: 35px;
+    z-index: 100;
+}
+
+.maillogin .mail {
+    position: relative;
+}
+
+.maillogin form input {
+    display: inline-block;
+    /*position: relative;*/
+    width: 114px;
+    /*height: 20px;*/
+    /*line-height: 20px;*/
+    border: 1px solid #ccc;
+    vertical-align: top;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.maillogin .mailend {
+    display: inline-block;
+    /*position: relative;*/
+    width: 114px;
+    /*height: 24px;*/
+    /*line-height: 24px;*/
+    border: 1px solid #ccc;
+    vertical-align: top;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.maillogin .submit {
+    /*display: inline-block;*/
+    width: 39px;
+    height: 18px;
+    line-height: 18px;
+    cursor: pointer;
+    color: #666;
+    border: 1px solid #ccc;
+}
+
+.maillogin span {
+    position: absolute;
+    margin-top: -9px;
+    /* display: inline-block; */
+    color: #333;
+    width: 40px;
+    height: 22px;
+    text-align: center;
+}
+
+
+/*精彩链接*/
+
+.header-tool .headjoke-box {
+    position: relative;
+    display: inline-block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 8px;
+    cursor: pointer;
+    color: #0aa770;
+}
+
+.headjoke-box:hover {
+    background-color: #f7f7f7;
+}
+
+.header-tool .headjoke-box i {
+    display: inline-block;
+    position: absolute;
+    top: 23px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(imgs/new_index_icon.png) -96px -46px no-repeat;
+}
+
+.header-tool .headjoke-box span {
+    overflow: hidden;
+    padding-left: 17px;
+    height: 60px;
+    line-height: 60px;
+}
+
+@-moz-keyframes play {
+    0%,
+    23% {
+        -moz-transform: translateX(0px);
+    }
+    27%,
+    73% {
+        -moz-transform: translateX(-75px);
+    }
+    77%,
+    100% {
+        -moz-transform: translateX(-150px);
+    }
+}
+
+@-webkit-keyframes play {
+    0%,
+    23% {
+        -webkit-transform: translateX(0px);
+    }
+    27%,
+    73% {
+        -webkit-transform: translateX(-75px);
+    }
+    77%,
+    100% {
+        -webkit-transform: translateX(-150px);
+    }
+}
+
+@keyframes play {
+    0%,
+    23% {
+        transform: translateX(0px);
+    }
+    27%,
+    73% {
+        transform: translateX(-75px);
+    }
+    77%,
+    100% {
+        transform: translateX(-150px);
+    }
+}
+
+
+/*header -----------end----------*/
+
+
+/*body -----------begin----------*/
+
+
+/*body -----------begin----search-panel-box------*/
+
+.body {
+    position: relative;
+}
+.search-panel-box-outer{
+	height: 123px;
+}
+
+/*滚动条事件触发前*/
+
+.search-panel-box {
+    position: relative;
+    width: 100%;
+    height: 82px;
+    /*padding-bottom: 65px;*/
+}
+
+
+/*滚动条事件触发后*/
+
+.search-panel-box-fixed {
+    position: fixed;
+    width: 100%;
+    height: 115px;
+    background: grey;
+    top: 0;
+    background: #f3f3f3;
+    opacity: .97;
+    border: 1px solid #d9d9d9;
+    z-index: 500;
+}
+
+.search-panel .search {
+    /*padding: 27px 83px 0 83px;*/
+    padding: 10px 150px 0 83px;
+    position: relative;
+    /*display: inline-block;*/
+    width: 800px;
+    height: 60px;
+    /*background: grey;*/
+    margin: 0 auto;
+}
+
+
+/*左边的百度logo*/
+
+.search .leftlogo {
+    position: relative;
+    top: 10px;
+    left: -30px;
+    display: inline-block;
+}
+
+.leftlogo a {
+    display: inline-block;
+    background: url(imgs/index_widthlg.png)-10px -212px no-repeat;
+    width: 120px;
+    height: 40px;
+}
+
+.search .show-tab {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 41px;
+    left: 221px;
+}
+
+.show-tab span {
+    cursor: pointer;
+    color: #999;
+    font-size: 12px;
+}
+
+
+/*所搜分类下拉框*/
+
+.search .tabs {
+    position: absolute;
+    top: 72px;
+    left: 211px;
+    z-index: 100;
+    border: 1px solid #666;
+    border-top: 0;
+    background: #fff;
+}
+
+.tabs .tab {
+    cursor: pointer;
+    vertical-align: middle;
+    display: block;
+    padding-left: 9px;
+    width: 45px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #999;
+}
+
+.tabs li:hover {
+    background: #f1f1f1;
+}
+
+
+/*搜索框*/
+
+.search .searchform {
+    display: inline-block;
+    position: relative;
+    /*width: ;*/
+    /*height: 46px;*/
+}
+
+
+/*百度搜索框*/
+
+.searchform .input {
+    font-size: 14px;
+    outline: none;
+    padding-left: 60px;
+    display: inline-block;
+    width: 478px;
+    height: 42px;
+    border: 1px solid #666;
+    border-right: 0;
+    background: #fff;
+}
+
+.searchform .news-num {
+    position: absolute;
+    right: 127px;
+    top: 31px;
+    width: 24px;
+    height: 19px;
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+    /*-87px;*/
+    background: url(imgs/sug_icon.png) no-repeat 3px -19px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.news-num:hover {
+    color: #f50;
+}
+
+.searchform .news {
+    display: inline-block;
+    position: absolute;
+    width: 538px;
+    top: 62px;
+    z-index: 100;
+    border: 1px solid #666;
+    background: #fff;
+}
+
+.searchform .news li {
+    padding: 2px 0 2px 9px;
+    font: 14px;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.news li:hover {
+    background: #f1f1f1;
+}
+
+.news li .news-icon {
+    display: inline-block;
+    height: 16px;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.news li .news-icon-index {
+    width: 18px;
+    margin-right: 8px;
+    text-align: center;
+    color: #fff;
+    font-family: arial;
+    font-weight: 800;
+    background: url(imgs/sug_icon.png) no-repeat 0 -38px;
+}
+
+.news li .news-icon-dark {
+    background: url(imgs/sug_icon.png) no-repeat 0 -55px;
+    color: #999;
+}
+
+.news-icon-new {
+    font-size: 10px;
+    color: #ff3c00;
+    font-weight: 800;
+}
+
+
+/*百度按钮*/
+
+.searchform .baidubtn {
+    position: relative;
+    top: 17px;
+    left: -8px;
+    border: 0;
+    display: inline-block;
+    width: 120px;
+    height: 46px;
+    background: url(imgs/index_widthlg.png) no-repeat -211px -180px;
+}
+
+.baidubtn:hover {
+    background: url(imgs/index_widthlg.png) no-repeat -211px -230px;
+}
+
+
+/*换肤功能*/
+
+.search .skin-change {
+    position: absolute;
+    top: 40px;
+    right: -34px;
+}
+
+.search .skin-change span {
+    display: inline-block;
+    height: 22px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.skin-change i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #444444;
+}
+
+.skin-1 {
+    background: #fbd0fb;
+}
+
+.skin-2 {
+    background: #aeacfd;
+}
+
+.skin-3 {
+    background: #a9efa9;
+}
+
+
+/*body -----------end----search-panel-box------*/
+
+
+/*body -----------begin----hotsearchCon------*/
+
+.hotsearchCon {
+    width: 1000px;
+    margin: 14px auto;
+    /*padding-left: 65px;*/
+    /*position: relative;*/
+}
+
+.hot-nav {
+    position: relative;
+    width: 658px;
+    height: 20px;
+    z-index: 1;
+    margin: 6px 0 26px 195px;
+}
+
+.hot-nav .hotsearchtop {
+    width: 658px;
+    position: relative;
+    height: 20px;
+}
+
+.hotsearchtop ul {
+    width: 658px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.hotsearchtop ul li:hover a {
+    color: #f30;
+    text-decoration: underline;
+}
+
+.hotsearchtop .tilte {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+
+.tilte a {
+    color: #090;
+    padding-left: 15px;
+    padding-bottom: 1px;
+    background: url(imgs/index_widthlg.png) -159px -260px no-repeat;
+}
+
+.hotsearchtop .text {
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.text a {
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+}
+
+
+/*body -----------end----hotsearchCon------*/
+
+
+/*----------menu-wrap----begin------*/
+
+.menu-wrap {
+    height: 38px;
+    border-top: 2px solid #099e6a;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fcfcfc;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-wrap li {
+    height: 38px;
+    line-height: 38px;
+    width: 111px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    /*background: grey;*/
+}
+
+.menu-wrap li:hover span {
+    color: #0aa770;
+}
+
+.menu-wrap li a {
+    display: block;
+    border-right: 0;
+    text-align: center;
+    color: #333;
+    position: relative;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+}
+
+.menu-wrap li a .menu-title {
+    border-width: 2px 0 0 0;
+}
+
+.menu-wrap li a .menu-split {
+    display: block;
+    width: 1px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(imgs/menus_split.png) center left no-repeat;
+}
+
+.menu-wrap .first {
+    width: 81px;
+    background-color: #0aa770;
+}
+
+.menu-wrap .first span {
+    color: #fff;
+}
+
+.menu-wrap .first:hover span {
+    color: #fff;
+}
+
+.menu-wrap .last {
+    width: 110px;
+}
+.menu-wrap .hot-game{
+
+	position: absolute;
+    top: -22px;
+    left: 636px;
+    overflow: hidden;
+    width: 111px;
+    height: 60px;
+}
+.menu-wrap .hot-game img{
+	    width: 111px;
+    height: 60px;
+	position: absolute;
+	/*top: 60px; */
+	/*top: 0; */
+}
+
+/*----------menu-wrap----end------*/
+
+
+/*----------govsite-top----begin------*/
+
+.govsite-top {
+    width: 1190px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    overflow: hidden;
+    height: 38px;
+    border: 1px solid #84d7ba;
+    font-size: 14px;
+    background: #fcfcfc;
+}
+
+.govsite-top span {
+    text-align: center;
+    display: inline-block;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    color: #0aa770;
+    margin-right: 21px;
+}
+
+.govsite-top div {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    margin-right: 31px;
+}
+
+.govsite-top div a {
+    /*font:14px;*/
+    height: 36px;
+    line-height: 36px;
+}
+
+.govsite-top div a:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+
+/*----------govsite-top----end------*/
+
+
+/*其他未做部分*/
+
+.other {
+    width: 100%;
+    height: 1000px;
+    /*background: grey;*/
+}
+
+
+/*body  -----------end----------*/
+
+
+/*footer -----------begin----------*/
+
+
+/*footer -----------end----------*/

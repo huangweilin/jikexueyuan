@@ -1,0 +1,92 @@
+body{
+	font: 15px arail;
+}
+header nav{
+	width:550px;
+	float:right;
+}
+header nav a{
+	margin-left: 15px;
+}
+/*主体部分*/
+.content{
+	text-align: center;
+	padding-top:200px;
+}
+
+.content img{
+	width: 270px;
+	height:129px;
+
+}
+.content input{
+	width: 450px;
+	height: 34px;
+}
+.content button{
+	width: 80px;
+	height: 40px;
+}
+nav a:link {
+	color: black;
+	
+}
+/*设置超链接a在其链接地址已被访问过时的样式*/
+ nav a:visited {
+	color: black;
+}
+/*元素在其鼠标悬停时的样式*/
+ nav a:hover {
+	color: blue;
+
+}
+/*元素在被用户激活（在鼠标点击与释放之间发生的事件）时的样式*/
+a:active {
+	background: black;
+	color: #f00;
+
+}
+
+.stop{
+	/*background-color: grey;*/
+	display: inline-block;
+		position: absolute;
+	right:50px;
+}
+.stop tr{	
+/*list-style-type:none;*/
+	display: none;
+}
+.stop:hover tr{
+	display: block;
+
+}
+/*.stop ul{	
+list-style-type:none;
+	display: none;
+}
+.stop:hover ul{
+	display: block;
+
+}*/
+p a:visited{
+color:grey;
+}
+/*底部部分*/
+.bottom{
+	/*position: absolute;*/
+	font-size: 13px;
+	line-height:3px;
+	color:grey;
+	bottom: 0;
+	right: 50%;
+	/*float: bottom;	*/
+	padding-top:200px;
+	text-align-last: center;
+	/*background-color: #47e6de;*/
+
+}
+.c4,.c5,.c6,.c3{
+	display: inline-block;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>怪异盒子和正常盒子</title>
+</head>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.shoe1 {
+    width: 100px;
+    height: 100px;
+    background-color: #c74545;
+}
+
+.shoebox1 {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 100px;
+    margin-top: 100px;
+    background-color: #b5e6f1;
+    border: 5px solid green;
+}
+
+.shoe2 {
+    width: 100px;
+    height: 100px;
+    background-color: #c74545;
+}
+
+.shoebox2 {
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    margin-left: 100px;
+    margin-top: 100px;
+    background-color: #b5e6f1;
+    border: 5px solid green;
+    box-sizing: border-box;
+}
+</style>
+
+<body>
+    <div class="shoebox1">
+        <div class="shoe1">正常盒子模型</div>
+    </div>
+    <br>
+    <hr>
+    <div class="shoebox2">
+        <div class="shoe2">怪异盒子模型</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body {
+    background: #e7e8ea;
+}
+
+.container {
+    min-width: 1000px;
+    background: #428bca;
+}
+
+.panel {
+    margin-bottom: 0px;
+    /*padding: 0 30px;*/
+}
+
+.font {
+    color: #fff;
+}
+
+.col-xs-3,
+.col-xs-9 {
+    padding: 0;
+}
+
+.side {
+    background: #428bca;
+    height: 723px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.dropdown>ul {
+    position: relative;
+    padding: 0;
+}
+
+.dropdown>ul li {
+    padding: 5px 0;
+}
+
+.hover:hover {
+    background: grey;
+}
+
+.mainhead {
+    background: #a5cbec;
+    border: 1px solid #66a1d4;
+}
+
+.mainhead h3,
+.mainhead h4 {
+    margin: 0;
+    line-height: 2;
+}
+
+.search-bar,
+.mainbody {
+    padding: 8px 15px;
+}
+
+.main {
+    background: #fff;
+    /*padding: 0;*/
+}
+
+nav {
+    text-align: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet" type="text/css" href="Calculator.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="calculator radio">
+            <div class="show radio" id="show">
+            0
+            </div>
+            <div>
+                <button type="button" class="radio" onclick="cal(1)">sin</button>
+                <button type="button" class="radio" onclick="cal(2)">cos</button>
+                <button type="button" class="radio" onclick="cal(3)">tan</button>
+                <button type="button" class="radio" onclick="del()">←</button>
+                <button type="button" class="radio" onclick="clearShow()">C</button>
+                <button type="button" class="radio" onclick="num(7)">7</button>
+                <button type="button" class="radio" onclick="num(8)">8</button>
+                <button type="button" class="radio" onclick="num(9)">9</button>
+                <button type="button" class="radio" onclick="divide()" id="divide" value="÷">÷</button>
+                <button type="button" class="radio" onclick="cal(5)">x^2</button>
+                <button type="button" class="radio" onclick="num(4)">4</button>
+                <button type="button" class="radio" onclick="num(5)">5</button>
+                <button type="button" class="radio" onclick="num(6)">6</button>
+                <button type="button" class="radio" onclick="times()" id="times" value="×">×</button>
+                <button type="button" class="radio" onclick="cal(6)">√x</button>
+                <button type="button" class="radio" onclick="num(1)">1</button>
+                <button type="button" class="radio" onclick="num(2)">2</button>
+                <button type="button" class="radio" onclick="num(3)">3</button>
+                <button type="button" class="radio" onclick="minus()" id="minus" value="-">-</button>
+                <button type="button" class="radio" onclick="cal(4)">1/x</button>
+                <button type="button" class="radio" onclick="point()" id="point" value="point">.</button>
+                <button type="button" class="radio" onclick="num(0)">0</button>
+                <button type="button" class="radio" onclick="negative()">+/-</button>
+                <button type="button" class="radio" onclick="plus()" id="plus" value="+">+</button>
+                <button type="button" class="radio" onclick="equal()" id="equal" value="=">=</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="Calculator.js"></script>
+</body>
+
+</html>

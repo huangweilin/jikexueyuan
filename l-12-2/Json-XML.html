@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <nav>
+            <a href="HTML.html">HTML</a>
+            <a href="CSS.html">CSS</a>
+            <a href="JavaScript.html">JavaScript</a>
+            <a href="jQuery.html">jQuery</a>
+            <a href="Ajax.html">Ajax</a>
+            <a href="HTTP.html">HTTP</a>
+            <a href="Json-XML.html">Json-XML</a>
+            <a href="localStorage.html">localStorage</a>
+        </nav>
+        <article>
+            <h1>前端面试题</h1>
+            <div>
+                <h3>JSON</h3>
+                <hr>
+                <p><strong>XML和JSON的区别？</strong></p>
+                <ul>
+                    <li>
+                        <p>数据体积方面</p>
+                        <ul>
+                            <li>JSON相对于XML来讲，数据的体积小，传递的速度更快些。</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>数据交互方面</p>
+                        <ul>
+                            <li>JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>数据描述方面</p>
+                        <ul>
+                            <li>JSON对数据的描述性比XML较差</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>传输速度方面</p>
+                        <ul>
+                            <li>JSON的速度要远远快于XML</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>JSON 的了解？</strong></p>
+                <ul>
+                    <li>
+                        <p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式</p>
+                    </li>
+                    <li>
+                        <p>它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小</p>
+                    </li>
+                    <li>
+                        <p>JSON字符串转换为JSON对象:</p>
+                    </li>
+                </ul>
+                <pre><code>var obj =eval('('+ str +')');
+                   var obj = str.parseJSON();
+                   var obj = JSON.parse(str);
+         </code></pre>
+                <ul>
+                    <li>JSON对象转换为JSON字符串：</li>
+                </ul>
+                <pre><code>var last=obj.toJSONString();
+                   var last=JSON.stringify(obj);
+        </code></pre>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
